@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+
+    /* ### Primary */
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    
+    /* ### Neutral */
+    
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+}
+
+html {
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    background-color: var(--Very-Light-Gray);
+}
+
+.mainBox {
+    min-width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+}
+
+.topTop {
+    font-weight: 200;
+    font-size: 24px;
+    color: var(--Grayish-Blue);
+    text-align: center;
+}
+
+.topMid {
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+    font-size: 25px;
+    text-align: center;
+}
+
+.topBot {
+    color: var(--Grayish-Blue);
+    font-weight: 200;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 360px;
+}
+
+.gridArea {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.grid1, .grid2, .grid3, .grid4 {
+    background-color: white;
+    border-top: 0.3rem solid;
+    border-radius: 4px 4px 4px 4px;
+    padding: 1.5rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    max-width: 360px;
+}
+
+.gridTitle {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--Very-Dark-Blue);
+}
+
+.gridText {
+    color: var(--Grayish-Blue);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.gridPic {
+    margin-left: 70%;
+}
+
+.grid1 {
+    border-top-color: var(--Cyan);
+}
+
+.grid2 {
+    border-top-color: var(--Red);
+}
+
+.grid3 {
+    border-top-color: var(--Orange);
+}
+
+.grid4 {
+    border-top-color: var(--Blue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+  
+@media (min-width: 760px) {
+    .gridArea {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        row-gap: 3rem;
+        column-gap: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .gridArea {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        row-gap: 3rem;
+        column-gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .grid1 {
+        grid-row: 1/3;
+        align-self: center;
+    }
+
+    .grid3 {
+        grid-row: 1/3;
+        grid-column: 3;
+        align-self: center;
+    }
+}
